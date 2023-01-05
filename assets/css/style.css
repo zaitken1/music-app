@@ -18,8 +18,18 @@
 
 
 
-/* History Buttons */
+/* History Section */
+aside.search-history{
+    background-color: #a0aaad;
+}
 
+.history-btn {
+    background-color: #8f99d5;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    border: .7px solid gray;
+}
 
 
 /* Lyrics Display */
