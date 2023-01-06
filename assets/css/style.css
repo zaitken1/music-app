@@ -20,16 +20,17 @@
 
 
 /* History Section */
-aside.search-history{
-    background-color: #a0aaad;
+.search-history{
+    background-color: #e1e1e1;
 }
 
 .history-btn {
-    background-color: #8f99d5;
-    padding: 5px;
-    text-align: center;
+    background-color: #aebaff;
+    padding: 3px;
     color: white;
     border: .7px solid gray;
+    border-radius: 3px;
+    width: 70px;
 }
 
 
