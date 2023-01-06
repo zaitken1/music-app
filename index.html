@@ -18,53 +18,50 @@
     <header>
       <div
         class="jumbotron text-center"
-        style="background-image: url(/assets/cheers-204742_1920.jpg)"
+        style="background-image: url(./assets/images/cheers-204742_1920.jpg)"
       >
         <h1 class="display-4 text-light">Music App</h1>
         <p class="lead text-muted">Enter a song to play and view the lyrics</p>
         <hr class="my-4" />
         <form class="form-inline my-2 my-lg-0 justify-content-center">
           <input
-            class="form-control mr-sm-2"
+            class="form-control mr-sm-2 search-input"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button class="btn btn-outline-success my-2 my-sm-0 search-btn">
             Search
           </button>
         </form>
       </div>
     </header>
 
-    <main>
-      <div class="song-card card" style="width: 18rem">
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </p>
+    <main class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 song-card card" style="width: 18rem">
+          <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+          <div id="player"></div>
         </div>
-      </div>
-      <div class="fluid-container">
-        <div class="row">
-          <aside class="search-history col-sm-4">
-            <p>Search History</p>
+
+        <aside class="col-md-4 search-history">
+          <div class="d-flex flex-column align-items-center">
+            <h4 class="mt-3">Search History</h4>
             <button class="history-btn">Song 1</button>
             <button class="history-btn">Song 2</button>
             <button class="history-btn">Song 3</button>
-          </aside>
-          <section class="song-lyrics col-sm-8 text-center overflow-auto">
-            <p>Song Lyrics</p>
+          </div>
+        </aside>
+
+        <section class="col-md-8 song-lyrics" style="text-align: center">
+          <div>
+            <h4>Song Lyrics</h4>
             <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-              Distinctio velit consequuntur aliquam officiis libero voluptatum
-              ipsa inventore saepe, neque totam laborum possimus obcaecati
-              consectetur exercitationem corrupti alias quam voluptatem! Fugit.
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+              voluptatem autem.
             </p>
-          </section>
-        </div>
+          </div>
+        </section>
       </div>
     </main>
 
