@@ -1,12 +1,42 @@
+//Get HTML elements
+var searchInput = $('.search-input');
+var searchBtn = $('.search-btn');
+
+//YouTube API variables
+var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
+var scottAPIKey = 'AIzaSyDpZQjFuUjVyg0d3_NEya9n2oYEvm9nMCw';
+var sophAPIKey = 'AIzaSyD5r9mHgGwHO-m77puQByqYHX7gYO-LIsg';
+var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${scottAPIKey}&maxResults=1&order=relevance&`;
+
+//YouTube API call based on user's search input
+function getVideo (event) {
+    event.preventDefault();
+    var track = searchInput.val().trim().toLowerCase();
+    
+    if (track) {
+        console.log('search submitted');
+
+        function inputSubmit(trackName){
+            $.get(baseYouTubeURL + `q=${trackName}`)
+                .then(function (currentData){
+                    console.log(currentData);
+                })
+        }
+
+    } else {
+        console.log("empty");
+    }
+
+    inputSubmit(track);
+}
+
+
+//API
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 
 console.log(musixMatchAPIKey);
 
-var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
-var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${youtubeAPIKey}`;
-var video = $.get(baseYouTubeURL + '&maxResults=1&order=relevance&q=heroes%20david%20bowie');
 
-console.log(video);
 
 // YouTube Video
 var tag = document.createElement('script');
@@ -51,3 +81,10 @@ var tag = document.createElement('script');
       function stopVideo() {
         player.stopVideo();
       }
+
+//Starting function on search button click
+function init() {
+    searchBtn.click(getVideo);
+};
+
+init();
