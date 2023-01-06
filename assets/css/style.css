@@ -19,8 +19,19 @@
 
 
 
-/* History Buttons */
+/* History Section */
+.search-history{
+    background-color: #e1e1e1;
+}
 
+.history-btn {
+    background-color: #aebaff;
+    padding: 3px;
+    color: white;
+    border: .7px solid gray;
+    border-radius: 3px;
+    width: 70px;
+}
 
 
 /* Lyrics Display */
