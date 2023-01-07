@@ -1,17 +1,19 @@
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 
-var artistSearch = "punk";
+var artistSearch = "ska";
 
-$.get(
-  `
+function getMusicData(event) {
+  $.get(
+    `
   https://api.allorigins.win/get?url=${encodeURIComponent(
     `https://api.musixmatch.com/ws/1.1/artist.search?q_artist=${artistSearch}&page_size=5&apikey=ad3a142fa0bfd7ef82851240e57a5429`
   )}
 `
-).then(function (data) {
-  data = JSON.parse(data.contents);
-  console.log(data);
-});
+  ).then(function (data) {
+    data = JSON.parse(data.contents);
+    console.log(data);
+  });
+}
 
 // YouTube Video
 var tag = document.createElement("script");
