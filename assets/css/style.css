@@ -5,11 +5,36 @@
 
 
 /* Jumbotron Styles */
+.search-icon {
+    position: relative;
+    font-size: 1.3rem;
+    z-index: 1;
+    right: -17px;
+    top: 0px;
+    color: var(--white);
+    cursor: pointer;
+    width: 0;
+}
 
+.search-input {
+    padding-left: 50px;
+    height: 2em;
+    width: 15em;
+    border-radius: 5px;
+    background-color: transparent;
+    color: white !important;
+    border: 3px solid #fff;
+    height: 40px;
+    font-size: 1em;
+}
 
+.search-input:focus {
+    background-color: transparent;
+}
 
-
-
+input::placeholder {
+    color: #ffffff !important;
+}
 
 /* Main area */
 
