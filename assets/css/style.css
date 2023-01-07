@@ -1,0 +1,57 @@
+/* global edits/resets */
+
+
+
+
+
+/* Jumbotron Styles */
+
+
+
+
+
+
+/* Main area */
+
+
+
+
+/* Video player */
+
+
+
+
+/* History Section */
+.search-history{
+    background-color: #e1e1e1;
+}
+
+.history-btn {
+    background-color: #aebaff;
+    padding: 3px;
+    color: white;
+    border: .7px solid gray;
+    border-radius: 3px;
+    width: 70px;
+}
+
+
+/* Lyrics Display */
+.song-lyrics{
+    background-color:rgb(195, 190, 199);
+    border:medium solid black;
+    
+    
+}
+.song-lyrics p{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.song-lyrics p:nth-child(2){
+    font-weight: normal;
+    color: #186ceb;
+}
+
+
+/* Media query's */
