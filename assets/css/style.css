@@ -1,6 +1,6 @@
 /* global edits/resets */
 body {
-    background-color: #f1f1f1;
+    background-color: #1a1616ee;
 }
 
 /* Jumbotron Styles */
@@ -66,36 +66,42 @@ input::placeholder {
 
 /* History Section */
 .search-history{
-    background-color: #e1e1e1;
-    border: 1px solid #b5b0b0;
+    background-color: rgba(127, 204, 157, 0.093);
+    border: 1px solid #6cc39e;
 }
-
+h4 {
+    color: #e5e5e5;
+}
 .history-btn {
     margin-top: 9px;
-    background-color: #aebaff;
+    background-color: #3faf30; 
     padding: 2px;
     color: white;
-    border: .7px solid gray;
+    border: .7px solid rgb(38, 74, 55);
     border-radius: 3px;
-    width: 10rem;
+    width: 7rem;
+}
+
+.history-btn:hover {
+    background-color: #238761f7;
 }
 
 
 /* Lyrics Display */
 .song-lyrics{
-    background-color:rgb(195, 190, 199);
-    border:medium solid black;
+    background-color:rgba(119, 92, 133, 0.118);
+    border:2px solid rgb(151, 139, 154);
     
     
 }
-.song-lyrics p{
+.song-lyrics p {
     font-size: larger;
     font-weight: bold;
 }
 
 .song-lyrics p:nth-child(2){
     font-weight: normal;
-    color: #186ceb;
+    color: #c9c9ff;
 }
 
 
