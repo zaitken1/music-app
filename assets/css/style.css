@@ -3,9 +3,6 @@ body {
     background-color: #f1f1f1;
 }
 
-
-
-
 /* Jumbotron Styles */
 .search-icon {
     position: relative;
@@ -20,33 +17,52 @@ body {
 
 .search-input {
     padding-left: 50px;
-    height: 2em;
     width: 15em;
     border-radius: 5px;
     background-color: transparent;
     color: white !important;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     height: 40px;
     font-size: 1em;
 }
 
 .search-input:focus {
     background-color: transparent;
+    border-color: #28a745;
 }
 
 input::placeholder {
     color: #ffffff !important;
 }
 
+.search-btn {
+    height: 40px;
+    border: 2px solid #28a745;
+}
+
 /* Main area */
 
 
 
+/* YouTube button */
+.song-card {
+    background-color: #f1f1f1;
+    border: none;
+}
 
-/* Video player */
+.yt-btn {
+    width: 300px;
+    background-color: #28a745;
+    border: none;
+}
 
+.yt-btn:hover {
+    background-color: #2cb74c;
+}
 
-
+.fa-youtube {
+    padding-right: 10px;
+}
 
 /* History Section */
 .search-history{
