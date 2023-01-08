@@ -13,78 +13,71 @@
 </head>
 
 <body>
-  <header>
-    <div class="jumbotron text-center" style="background-image: url(./assets/images/cheers-204742_1920.jpg)">
-      <h1 class="display-4 text-light">Music App</h1>
-      <p class="lead text-muted">Enter a song to play and view the lyrics</p>
-      <hr class="my-4" />
-      <form class="form-inline my-2 my-lg-0 justify-content-center">
-        <i class="fas fa-search search-icon"></i>
-        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search" />
-        <button class="btn btn-outline-success my-2 my-sm-0 search-btn">
-          Search
-        </button>
-      </form>
-    </div>
-  </header>
+  <main>
+    <header>
+      <div class="jumbotron text-center" style="background-image: url(./assets/images/cheers-204742_1920.jpg)">
+        <h1 class="display-4 text-light">Music App</h1>
+        <p class="lead text-muted">Enter a song to play and view the lyrics</p>
+        <hr class="my-4" />
+        <form class="form-inline my-2 my-lg-0 justify-content-center">
+          <i class="fas fa-search search-icon"></i>
+          <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search" />
+          <button class="btn btn-outline-success my-2 my-sm-0 search-btn">
+            Search
+          </button>
+        </form>
+      </div>
+    </header>
 
-  ======== stylecss-AS
-  <main class="container-fluid mb-3 mx-4">
-    <div class="row">
-      <div class="col-lg-12 song-card card" style="width: 18rem">
-        <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
-        <div id="player"></div>
+
+    ======== stylecss-AS
+    <div class="container-fluid mb-3 mx-4">
+      <div class="row">
+        <div class="col-lg-12 song-card card" style="width: 18rem">
+          <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+          <div id="player"></div>
+        </div>
+
+        <aside class="col-lg-3 search-history mr-3 mt-5">
+          <div class="d-flex flex-column align-items-center mb-5">
+            <h4 class="my-3">Search History</h4>
+            <button class="history-btn">Song 1</button>
+            <button class="history-btn">Song 2</button>
+            <button class="history-btn">Song 3</button>
+
+            <aside class="container-fluid">
+              <div class="row mb-3 mx-3">
+                <div class="col-lg-12 d-flex song-card card justify-content-center align-items-center"
+                  style="width: 18rem">
+                  <button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song
+                    on
+                    YouTube</button>
+
+                </div>
+                ========== stylecss-AS
+            </aside>
+
+          </div>
+        </aside>
+        <section class="col-lg-8 song-lyrics ml-4 mt-5" style="text-align: center">
+          <div>
+            <h4 class="my-3">Similar to your search...</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
+              voluptatem autem.
+            </p>
+          </div>
+        </section>
       </div>
 
-      <aside class="col-lg-3 search-history mr-3 mt-5">
-        <div class="d-flex flex-column align-items-center mb-5">
-          <h4 class="my-3">Search History</h4>
-          <button class="history-btn">Song 1</button>
-          <button class="history-btn">Song 2</button>
-          <button class="history-btn">Song 3</button>
+    </div>
 
-          <main class="container-fluid">
-            <div class="row mb-3 mx-3">
-              <div class="col-lg-12 d-flex song-card card justify-content-center align-items-center"
-                style="width: 18rem">
-                <button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song on
-                  YouTube</button>
-              </div>
 
-              ========== stylecss-AS
-              <section class="col-lg-8 song-lyrics ml-4 mt-5" style="text-align: center">
-                <div>
-                  <h4 class="my-3">Similar to your search...</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-                    voluptatem autem.
-                  </p>
-                </div>
-              </section>
-            </div>
-          </main>
 
-          <aside class="col-lg-4 search-history mt-5">
-            <div class="d-flex flex-column align-items-center mb-5">
-              <h4 class="my-3">Search History</h4>
-              <button class="history-btn">Song 1</button>
-              <button class="history-btn">Song 2</button>
-              <button class="history-btn">Song 3</button>
-            </div>
-          </aside>
 
-          <section class="col-md-8 song-lyrics mt-5" style="text-align: center">
-            <div>
-              <h4>Song Lyrics</h4>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-                voluptatem autem.
-              </p>
-            </div>
-          </section>
-        </div>
+
+
   </main>
-
 
   <script src="https://code.jquery.com/jquery-3.6.3.min.js"
     integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
