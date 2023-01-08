@@ -70,11 +70,11 @@ input::placeholder {
     border: 1px solid #6cc39e;
 }
 h4 {
-    color: #e5e5e5;
+    color: #fff;
 }
 .history-btn {
     margin-top: 9px;
-    background-color: #3faf30; 
+    background-color: #3faf30;
     padding: 2px;
     color: white;
     border: .7px solid rgb(38, 74, 55);
@@ -89,19 +89,19 @@ h4 {
 
 /* Lyrics Display */
 .song-lyrics{
-    background-color:rgba(119, 92, 133, 0.118);
+    background-color:rgba(119, 92, 133, 0.332);
     border:2px solid rgb(151, 139, 154);
     
     
 }
-.song-lyrics p {
+.song-lyrics p{
     font-size: larger;
     font-weight: bold;
 }
 
 .song-lyrics p:nth-child(2){
     font-weight: normal;
-    color: #c9c9ff;
+    color: #186ceb;
 }
 
 
