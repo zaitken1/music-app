@@ -26,7 +26,7 @@ function getArtistNames(event) {
 
       lyricsSection.html(`
     <div>
-      <h4>Similar to your search...</h4>
+      <h4 class="my-3">Similar to your search...</h4>
       <ul>
         <li>${data.message.body.artist_list[0].artist.artist_name}</li>
         <li>${data.message.body.artist_list[1].artist.artist_name}</li>
@@ -37,6 +37,13 @@ function getArtistNames(event) {
     </div>
     `);
     });
+  } else {
+    lyricsSection.html(`
+    <div>
+      <h4 class="my-3">Similar to your search...</h4>
+      <p>Please enter a search value...</p>
+    </div>
+    `);
   }
 }
 
