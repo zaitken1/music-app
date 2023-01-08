@@ -43,7 +43,7 @@ function getArtistNames(event) {
     lyricsSection.html(`
     <div>
       <h4>Similar to your search...</h4>
-      <p>test</p>
+      <p>Please enter a search value...</p>
     </div>
     `);
   }
