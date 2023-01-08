@@ -1,26 +1,30 @@
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 
-var musicDataSearch = "daft punk";
+// var musicDataSearch = "rizzle";
 
-// Varibale to target search input and search button
+// Varibales to target search button, search input & song lyrics section
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
 
 // var musicDataSearch = searchInput.val();
 
-if (musicDataSearch) {
-  $.get(
-    `
+function getArtistNames(event) {
+  event.preventDefault();
+  var musicDataSearch = searchInput.val();
+
+  if (musicDataSearch) {
+    $.get(
+      `
   https://api.allorigins.win/get?url=${encodeURIComponent(
     `https://api.musixmatch.com/ws/1.1/artist.search?q_artist=${musicDataSearch}&page_size=5&apikey=ad3a142fa0bfd7ef82851240e57a5429`
   )}
 `
-  ).then(function (data) {
-    data = JSON.parse(data.contents);
-    lyricsSection.html("");
+    ).then(function (data) {
+      data = JSON.parse(data.contents);
+      lyricsSection.html("");
 
-    lyricsSection.html(`
+      lyricsSection.html(`
     <div>
       <h4>Similar to your search...</h4>
       <ul>
@@ -32,7 +36,8 @@ if (musicDataSearch) {
       </ul>
     </div>
     `);
-  });
+    });
+  }
 }
 
 // YouTube Video
@@ -81,7 +86,7 @@ function stopVideo() {
 
 //Starting function on search button click
 function init() {
-  searchBtn.click(getVideo);
+  searchBtn.click(getArtistNames);
 }
 
 init();
