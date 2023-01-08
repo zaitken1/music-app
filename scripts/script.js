@@ -1,17 +1,44 @@
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 
-var artistSearch = "punk";
+// var musicDataSearch = "rizzle";
 
-$.get(
-  `
+// Varibales to target search button, search input & song lyrics section
+var searchBtn = $(".search-btn");
+var searchInput = $(".search-input");
+var lyricsSection = $(".song-lyrics");
+
+// var musicDataSearch = searchInput.val();
+
+function getArtistNames(event) {
+  event.preventDefault();
+  var musicDataSearch = searchInput.val();
+
+  if (musicDataSearch) {
+    $.get(
+      `
   https://api.allorigins.win/get?url=${encodeURIComponent(
-    `https://api.musixmatch.com/ws/1.1/artist.search?q_artist=${artistSearch}&page_size=5&apikey=ad3a142fa0bfd7ef82851240e57a5429`
+    `https://api.musixmatch.com/ws/1.1/artist.search?q_artist=${musicDataSearch}&page_size=5&apikey=ad3a142fa0bfd7ef82851240e57a5429`
   )}
 `
-).then(function (data) {
-  data = JSON.parse(data.contents);
-  console.log(data);
-});
+    ).then(function (data) {
+      data = JSON.parse(data.contents);
+      lyricsSection.html("");
+
+      lyricsSection.html(`
+    <div>
+      <h4>Similar to your search...</h4>
+      <ul>
+        <li>${data.message.body.artist_list[0].artist.artist_name}</li>
+        <li>${data.message.body.artist_list[1].artist.artist_name}</li>
+        <li>${data.message.body.artist_list[2].artist.artist_name}</li>
+        <li>${data.message.body.artist_list[3].artist.artist_name}</li>
+        <li>${data.message.body.artist_list[4].artist.artist_name}</li>
+      </ul>
+    </div>
+    `);
+    });
+  }
+}
 
 // YouTube Video
 var tag = document.createElement("script");
@@ -59,7 +86,7 @@ function stopVideo() {
 
 //Starting function on search button click
 function init() {
-  searchBtn.click(getVideo);
+  searchBtn.click(getArtistNames);
 }
 
 init();
