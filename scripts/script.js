@@ -1,13 +1,7 @@
-var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
-
-// var musicDataSearch = "rizzle";
-
 // Varibales to target search button, search input & song lyrics section
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
-
-// var musicDataSearch = searchInput.val();
 
 function getArtistNames(event) {
   event.preventDefault();
