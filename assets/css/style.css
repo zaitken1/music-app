@@ -1,76 +1,79 @@
 /* global edits/resets */
 body {
-    background-color: #1a1616;
+  background-color: #1a1616;
+}
+
+ul {
+  list-style: none;
+  color: #c9c9ff;
 }
 
 /* Jumbotron Styles */
 .search-icon {
-    position: relative;
-    font-size: 1.3rem;
-    z-index: 1;
-    right: -17px;
-    top: 0px;
-    color: var(--white);
-    cursor: pointer;
-    width: 0;
+  position: relative;
+  font-size: 1.3rem;
+  z-index: 1;
+  right: -17px;
+  top: 0px;
+  color: var(--white);
+  cursor: pointer;
+  width: 0;
 }
 
 .search-input {
-    padding-left: 50px;
-    width: 15em;
-    border-radius: 5px;
-    background-color: transparent;
-    color: white !important;
-    border: 2px solid #fff;
-    height: 40px;
-    font-size: 1em;
+  padding-left: 50px;
+  width: 15em;
+  border-radius: 5px;
+  background-color: transparent;
+  color: white !important;
+  border: 2px solid #fff;
+  height: 40px;
+  font-size: 1em;
 }
 
 .search-input:focus {
-    background-color: transparent;
-    border-color: #28a745;
+  background-color: transparent;
+  border-color: #28a745;
 }
 
 input::placeholder {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .search-btn {
-    height: 40px;
-    border: 2px solid #28a745;
+  height: 40px;
+  border: 2px solid #28a745;
 }
 
 /* Main area */
 
-
-
 /* YouTube button */
 .song-card {
-    background-color: #1a1616 !important;
-    border: none;
+  background-color: #1a1616 !important;
+  border: none;
 }
 
 .yt-btn {
-    width: 300px;
-    background-color: #28a745;
-    border: none;
+  width: 300px;
+  background-color: #28a745;
+  border: none;
 }
 
 .yt-btn:hover {
-    background-color: #2cb74c;
+  background-color: #2cb74c;
 }
 
 .fa-youtube {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 /* History Section */
-.search-history{
-    background-color: rgba(127, 204, 157, 0.093);
-    border: 1px solid #6cc39e;
+.search-history {
+  background-color: rgba(127, 204, 157, 0.093);
+  border: 1px solid #6cc39e;
 }
 h4 {
-    color: #e5e5e5;
+  color: #e5e5e5;
 }
 .history-btn, .history-btn-two {
     margin-top: 9px;
@@ -83,26 +86,22 @@ h4 {
 }
 
 .history-btn:hover {
-    background-color: #238761f7;
+  background-color: #238761f7;
 }
-
 
 /* Lyrics Display */
-.song-lyrics{
-    background-color:rgba(119, 92, 133, 0.118);
-    border:2px solid rgb(151, 139, 154);
-    
-    
+.song-lyrics {
+  background-color: rgba(119, 92, 133, 0.118);
+  border: 2px solid rgb(151, 139, 154);
 }
 .song-lyrics p {
-    font-size: larger;
-    font-weight: bold;
+  font-size: larger;
+  font-weight: bold;
 }
 
-.song-lyrics p:nth-child(2){
-    font-weight: normal;
-    color: #c9c9ff;
+.song-lyrics p:nth-child(2) {
+  font-weight: normal;
+  color: #c9c9ff;
 }
-
 
 /* Media query's */
