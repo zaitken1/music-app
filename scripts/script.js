@@ -3,6 +3,15 @@ var songCard = $('.song-card');
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
+// Variable targeting button-container div
+var btnContainer = $(".button-container");
+
+// gets local storage items
+var searchHistory = localStorage.getItem("artist");
+console.log(searchHistory);
+// JSON.parse(localStorage.getItem("artist"));
+
+btnContainer.html(``);
 
 // API Keys and base YouTube URL
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
@@ -58,7 +67,7 @@ function getVideoLink(event) {
 
         lyricsSection.html(`
     <div>
-      <h4>Similar to your search...</h4>
+      <h4 class="my-3">Similar to your search...</h4>
       <ul>
         <li>${data.message.body.artist_list[0].artist.artist_name}</li>
         <li>${data.message.body.artist_list[1].artist.artist_name}</li>
