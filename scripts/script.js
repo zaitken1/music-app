@@ -1,6 +1,8 @@
-
-//Global Variables & HTML elements
+//Get HTML elements
 var songCard = $('.song-card');
+var searchBtn = $(".search-btn");
+var searchInput = $(".search-input");
+var lyricsSection = $(".song-lyrics");
 
 // API Keys and base YouTube URL
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
@@ -22,6 +24,8 @@ function getVideo (event) {
               .then(function (currentData){
                   console.log(currentData);
               })
+
+              searchInput.val('');
               songCard.html('');
 
               songCard.html(`
@@ -38,10 +42,7 @@ function getVideo (event) {
 
 // var musicDataSearch = "rizzle";
 
-// Variables to target search button, search input, YouTube button & song lyrics section
-var searchBtn = $(".search-btn");
-var searchInput = $(".search-input");
-var lyricsSection = $(".song-lyrics");
+
 
 // var musicDataSearch = searchInput.val();
 function getArtistNames(event) {
