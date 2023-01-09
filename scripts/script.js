@@ -12,6 +12,7 @@ var lyricsSection = $(".song-lyrics");
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
+  localStorage.setItem("music", searchInput.val());
 
   if (musicDataSearch) {
     $.get(
