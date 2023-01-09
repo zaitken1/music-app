@@ -4,6 +4,7 @@ body {
 }
 
 ul {
+  list-style: none;
   color: #c9c9ff;
 }
 
