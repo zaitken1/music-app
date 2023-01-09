@@ -2,11 +2,27 @@
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
+// Variable targeting button-container div
+var btnContainer = $(".button-container");
+
+// gets local storage items
+var searchHistory = "";
+// JSON.parse(localStorage.getItem("artist"));
+
+btnContainer.html(``);
+
+function addButton() {
+  for (let i = 0; i < searchHistory.length; i++) {
+    btnContainer.html(`
+  <button class="history-btn">${searchHistory[i]}</button>
+  `);
+  }
+}
 
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
-  localStorage.setItem("music", searchInput.val());
+  searchHistory += localStorage.setItem("artist", musicDataSearch);
 
   if (musicDataSearch) {
     $.get(
@@ -40,6 +56,7 @@ function getArtistNames(event) {
     </div>
     `);
   }
+  addButton();
 }
 
 // YouTube Video
