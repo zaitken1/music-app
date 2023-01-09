@@ -31,10 +31,6 @@ function getVideoLink(event) {
           songCard.html(`
               <a href="https://www.youtube.com/watch?v=${videoID}" target="_blank"><button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song on YouTube</button></a>
               `);
-          
-          var youtubeBtn = $('.yt-btn');
-
-
         })
     } 
     }
@@ -43,8 +39,6 @@ function getVideoLink(event) {
   }
 
   // var musicDataSearch = "rizzle";
-
-
 
   // var musicDataSearch = searchInput.val();
   function getArtistNames(event) {
@@ -80,7 +74,8 @@ function getVideoLink(event) {
 
   //Starting function on search button click
   function init() {
-    searchBtn.click(getArtistNames, getVideoLink);
+    searchBtn.click(getArtistNames);
+    searchBtn.click(getVideoLink);
   }
 
   init();
