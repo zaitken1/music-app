@@ -1,17 +1,32 @@
-var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
-
-// var musicDataSearch = "rizzle";
-
 // Varibales to target search button, search input & song lyrics section
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
+// Variable targeting button-container div
+var btnContainer = $(".button-container");
 
-// var musicDataSearch = searchInput.val();
+// gets local storage items
+var searchHistory = localStorage.getItem("artist");
+console.log(searchHistory);
+// JSON.parse(localStorage.getItem("artist"));
+
+btnContainer.html(``);
+
+function addButton() {
+  searchHistory = searchHistory ? searchHistory.split(",") : [];
+  searchHistory.push(searchInput.val());
+  localStorage.setItem("artist", searchHistory.toString());
+  for (let i = 0; i < searchHistory.length; i++) {
+    btnContainer.html(`
+  <button class="history-btn">${searchHistory[i]}</button>
+  `);
+  }
+}
 
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
+  searchHistory += localStorage.setItem("artist", musicDataSearch);
 
   if (musicDataSearch) {
     $.get(
@@ -26,7 +41,7 @@ function getArtistNames(event) {
 
       lyricsSection.html(`
     <div>
-      <h4>Similar to your search...</h4>
+      <h4 class="my-3">Similar to your search...</h4>
       <ul>
         <li>${data.message.body.artist_list[0].artist.artist_name}</li>
         <li>${data.message.body.artist_list[1].artist.artist_name}</li>
@@ -37,7 +52,15 @@ function getArtistNames(event) {
     </div>
     `);
     });
+  } else {
+    lyricsSection.html(`
+    <div>
+      <h4 class="my-3">Similar to your search...</h4>
+      <p>Please enter a search value...</p>
+    </div>
+    `);
   }
+  addButton();
 }
 
 // YouTube Video
