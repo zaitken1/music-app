@@ -6,12 +6,16 @@ var lyricsSection = $(".song-lyrics");
 var btnContainer = $(".button-container");
 
 // gets local storage items
-var searchHistory = "";
+var searchHistory = localStorage.getItem("artist");
+console.log(searchHistory);
 // JSON.parse(localStorage.getItem("artist"));
 
 btnContainer.html(``);
 
 function addButton() {
+  searchHistory = searchHistory ? searchHistory.split(",") : [];
+  searchHistory.push(searchInput.val());
+  localStorage.setItem("artist", searchHistory.toString());
   for (let i = 0; i < searchHistory.length; i++) {
     btnContainer.html(`
   <button class="history-btn">${searchHistory[i]}</button>
