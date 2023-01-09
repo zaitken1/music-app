@@ -1,14 +1,49 @@
+
+//Global Variables & HTML elements
+var songCard = $('.song-card');
+
+// API Keys and base YouTube URL
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
+var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
+var scottAPIKey = 'AIzaSyDpZQjFuUjVyg0d3_NEya9n2oYEvm9nMCw';
+var sophAPIKey = 'AIzaSyD5r9mHgGwHO-m77puQByqYHX7gYO-LIsg';
+var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${youtubeAPIKey}&maxResults=1&order=relevance&`;
+
+//YouTube API call to create button to link to YouTube based on user search input
+function getVideo (event) {
+  event.preventDefault();
+  var track = searchInput.val().trim().toLowerCase();
+
+  if (track) {
+      console.log('search submitted');
+
+      function inputSubmit(trackName){
+          $.get(baseYouTubeURL + `q=${trackName}`)
+              .then(function (currentData){
+                  console.log(currentData);
+              })
+              songCard.html('');
+
+              songCard.html(`
+              <button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song on YouTube</button>
+              `)
+      }
+
+  } else {
+      console.log("empty");
+  }
+
+  inputSubmit(track);
+}
 
 // var musicDataSearch = "rizzle";
 
-// Varibales to target search button, search input & song lyrics section
+// Variables to target search button, search input, YouTube button & song lyrics section
 var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
 
 // var musicDataSearch = searchInput.val();
-
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
@@ -40,53 +75,9 @@ function getArtistNames(event) {
   }
 }
 
-// YouTube Video
-var tag = document.createElement("script");
-
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName("script")[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var player;
-function onYouTubeIframeAPIReady() {
-  player = new YT.Player("player", {
-    height: "300",
-    width: "550",
-    videoId: "M7lc1UVf-VE",
-    playerVars: {
-      playsinline: 1,
-    },
-    events: {
-      onReady: onPlayerReady,
-      onStateChange: onPlayerStateChange,
-    },
-  });
-}
-
-// 4. The API will call this function when the video player is ready.
-function onPlayerReady(event) {
-  event.target.playVideo();
-}
-
-// 5. The API calls this function when the player's state changes.
-//    The function indicates that when playing a video (state=1),
-//    the player should play for six seconds and then stop.
-var done = false;
-function onPlayerStateChange(event) {
-  if (event.data == YT.PlayerState.PLAYING && !done) {
-    setTimeout(stopVideo, 6000);
-    done = true;
-  }
-}
-function stopVideo() {
-  player.stopVideo();
-}
-
 //Starting function on search button click
 function init() {
-  searchBtn.click(getArtistNames);
+  searchBtn.click(getArtistNames, getVideo);
 }
 
 init();
