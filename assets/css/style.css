@@ -78,6 +78,7 @@ input::placeholder {
 .search-history {
   background-color: rgba(127, 204, 157, 0.093);
   border: 1px solid #6cc39e;
+  border-radius: 7px;
 }
 h4 {
   color: #e5e5e5;
@@ -98,7 +99,7 @@ h4 {
 }
 
 .delete-btn {
-   padding: 0px;
+   padding: 2px;
    background-color: transparent;
    border: none;
 }
@@ -120,6 +121,7 @@ h4 {
 .song-lyrics {
   background-color: rgba(119, 92, 133, 0.118);
   border: 2px solid rgb(151, 139, 154);
+  border-radius: 7px;
 }
 .song-lyrics p {
   font-size: larger;
