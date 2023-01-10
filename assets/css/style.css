@@ -63,6 +63,12 @@ input::placeholder {
   background-color: #2cb74c;
 }
 
+.yt-btn:active, .yt-btn:focus{
+  background-color: #28a745 !important;
+  box-shadow: none !important;
+}
+
+
 .fa-youtube {
   padding-right: 10px;
 }
