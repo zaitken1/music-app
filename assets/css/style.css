@@ -51,6 +51,7 @@ input::placeholder {
 .song-card {
   background-color: #1a1616 !important;
   border: none;
+  width: 100% !important;
 }
 
 .yt-btn {
@@ -128,3 +129,26 @@ h4 {
 }
 
 /* Media query's */
+@media screen and (max-width: 991px) {
+  .search-hist {
+    flex-direction: row !important;
+  }
+
+  .history-btn, .history-btn-two {
+    margin: 5px;
+  }
+
+}
+
+@media screen and (max-width: 758px) {
+  .search-hist {
+    flex-wrap: wrap;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .search-input {
+    margin-right: 10px;
+  }
+}
