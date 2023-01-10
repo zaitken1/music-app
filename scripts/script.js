@@ -90,14 +90,11 @@ function getVideoLink(event) {
 
   inputSubmit(track);
 }
-
-// var musicDataSearch = "rizzle";
-
+//Test comment
 // var musicDataSearch = searchInput.val();
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
-  searchHistory += localStorage.setItem("artist", musicDataSearch);
 
   if (musicDataSearch) {
     $.get(
