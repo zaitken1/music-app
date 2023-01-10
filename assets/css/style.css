@@ -81,14 +81,14 @@ input::placeholder {
 h4 {
   color: #e5e5e5;
 }
-.history-btn {
-  margin-top: 9px;
-  background-color: #3faf30;
-  padding: 2px;
-  color: white;
-  border: 0.7px solid rgb(38, 74, 55);
-  border-radius: 3px;
-  width: 7rem;
+.history-btn, .history-btn-two {
+    margin-top: 9px;
+    background-color: #3faf30; 
+    padding: 2px;
+    color: white;
+    border: .7px solid rgb(38, 74, 55);
+    border-radius: 3px;
+    width: 7rem;
 }
 
 .history-btn:hover {
