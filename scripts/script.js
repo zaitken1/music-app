@@ -91,8 +91,6 @@ function getVideoLink(event) {
   inputSubmit(track);
 }
 
-// var musicDataSearch = "rizzle";
-
 // var musicDataSearch = searchInput.val();
 function getArtistNames(event) {
   event.preventDefault();
