@@ -75,6 +75,7 @@ function getVideoLink(event) {
           var text = $(this).text();
           searchInput.val(text);
           getVideoLink(event);
+          getArtistNames(event);
         });
 
         localStorage.setItem("track", JSON.stringify(searchHistory));
