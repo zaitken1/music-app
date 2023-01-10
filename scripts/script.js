@@ -10,7 +10,7 @@ var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
 var scottAPIKey = "AIzaSyDpZQjFuUjVyg0d3_NEya9n2oYEvm9nMCw";
 var sophAPIKey = "AIzaSyD5r9mHgGwHO-m77puQByqYHX7gYO-LIsg";
-var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${youtubeAPIKey}&maxResults=1&order=relevance&`;
+var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${scottAPIKey}&maxResults=1&order=relevance&`;
 
 //Check localStorage for items
 var searchHistory = JSON.parse(localStorage.getItem("track")) || [];
