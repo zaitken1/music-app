@@ -104,11 +104,14 @@ h4 {
 }
 
 .fa-trash-alt:hover {
-    border: #dc3545 3px;
+    background: #dc3546d6;
+    border-radius: 10px;
+    padding: 10px;
+    color: #e5e5e5;
 }
 
 .fa-trash-alt {
-    size: 4rem;
+   font-size: 1.4rem;
     padding: 10px;
     color: #dc3545;
 }
