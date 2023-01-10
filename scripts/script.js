@@ -10,7 +10,7 @@ var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
 var scottAPIKey = "AIzaSyDpZQjFuUjVyg0d3_NEya9n2oYEvm9nMCw";
 var sophAPIKey = "AIzaSyD5r9mHgGwHO-m77puQByqYHX7gYO-LIsg";
-var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${scottAPIKey}&maxResults=1&order=relevance&`;
+var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${sophAPIKey}&maxResults=1&order=relevance&`;
 
 //Check localStorage for items
 var searchHistory = JSON.parse(localStorage.getItem("track")) || [];
@@ -67,7 +67,6 @@ function getVideoLink(event) {
           create.text(searchHistory[i]);
           searchHist.append(create);
         }
-
         var searchHistoryTwo = $(".history-btn-two");
 
         searchHistoryTwo.click(function (event) {
@@ -85,6 +84,8 @@ function getVideoLink(event) {
         songCard.html(`
               <a href="https://www.youtube.com/watch?v=${videoID}" target="_blank"><button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song on YouTube</button></a>
               `);
+              deleteButton.removeClass('hide');
+
       });
     }
   }
@@ -154,6 +155,17 @@ function hist() {
 }
 
 hist();
+
+// removes search-history buttons from local storage and the dom
+var deleteButton = $(".bin-icon");
+deleteButton.click(clearHistoryButtons);
+
+function clearHistoryButtons (){
+  $(".history-btn-two").addClass('hide');
+  localStorage.clear();
+  deleteButton.addClass('hide');
+
+}
 
 //Starting function on search button click
 function init() {

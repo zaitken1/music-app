@@ -8,6 +8,10 @@ ul {
   color: #c9c9ff;
 }
 
+.hide {
+    display:none;
+}
+
 /* Jumbotron Styles */
 .search-icon {
   position: relative;
