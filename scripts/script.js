@@ -99,7 +99,6 @@ function getVideoLink(event) {
 function getArtistNames(event) {
   event.preventDefault();
   var musicDataSearch = searchInput.val();
-  searchHistory += localStorage.setItem("artist", musicDataSearch);
 
     if (musicDataSearch) {
       $.get(
