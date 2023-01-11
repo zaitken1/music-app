@@ -1,7 +1,7 @@
 /* global edits/resets */
 body {
   background-color: #1a1616;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -9,14 +9,20 @@ ul {
   color: #c9c9ff;
 }
 
+/* Custom styles */
+
+/* Heading Styles */
+.h1-letter {
+  color: rgb(153, 218, 49);
+}
+
 .hide {
-    display:none;
+  display: none;
 }
 
 /* Jumbotron Styles */
 
-.jumbotron h1{
-
+.jumbotron h1 {
   font-weight: 500;
 }
 
@@ -75,11 +81,11 @@ input::placeholder {
   background-color: #2cb74c;
 }
 
-.yt-btn:active, .yt-btn:focus{
+.yt-btn:active,
+.yt-btn:focus {
   background-color: #28a745 !important;
   box-shadow: none !important;
 }
-
 
 .fa-youtube {
   padding-right: 10px;
@@ -95,14 +101,15 @@ h4 {
   color: #e5e5e5;
 }
 
-.history-btn, .history-btn-two {
-    margin-top: 9px;
-    background-color: #3faf30; 
-    padding: 2px;
-    color: white;
-    border: .7px solid rgb(38, 74, 55);
-    border-radius: 3px;
-    width: 7rem;
+.history-btn,
+.history-btn-two {
+  margin-top: 9px;
+  background-color: #3faf30;
+  padding: 2px;
+  color: white;
+  border: 0.7px solid rgb(38, 74, 55);
+  border-radius: 3px;
+  width: 7rem;
 }
 
 .history-btn:hover {
@@ -110,22 +117,22 @@ h4 {
 }
 
 .delete-btn {
-   padding: 2px;
-   background-color: transparent;
-   border: none;
+  padding: 2px;
+  background-color: transparent;
+  border: none;
 }
 
 .fa-trash-alt:hover {
-    background: #dc3546d6;
-    border-radius: 10px;
-    padding: 10px;
-    color: #e5e5e5;
+  background: #dc3546d6;
+  border-radius: 10px;
+  padding: 10px;
+  color: #e5e5e5;
 }
 
 .fa-trash-alt {
-   font-size: 1.4rem;
-    padding: 10px;
-    color: #dc3545;
+  font-size: 1.4rem;
+  padding: 10px;
+  color: #dc3545;
 }
 
 /* Lyrics Display */
@@ -150,10 +157,10 @@ h4 {
     flex-direction: row !important;
   }
 
-  .history-btn, .history-btn-two {
+  .history-btn,
+  .history-btn-two {
     margin: 5px;
   }
-
 }
 
 @media screen and (max-width: 758px) {
