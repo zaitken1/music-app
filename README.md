@@ -18,6 +18,14 @@
 
 ## [![HTML](https://img.shields.io/badge/HTML-2ea44f)](https://) [![CSS](https://img.shields.io/badge/CSS-3234a8)](https://) [![Javascipt](https://img.shields.io/badge/Javascipt-a8a232)](https://)
 
+---
+
+## Link to live deployment
+
+## https://zaitken1.github.io/music-app/
+
+---
+
 ## Credits
 
 N/A
