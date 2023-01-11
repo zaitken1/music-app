@@ -7,6 +7,7 @@ body {
 ul {
   list-style: none;
   color: #c9c9ff;
+  padding: 0;
 }
 
 /* Global Variables */
