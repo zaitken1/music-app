@@ -1,12 +1,10 @@
-# Music Search App
+# MusiXTube
 
 ## Description
 
 ---
 
-### A web app that allows users to search for a music video and display the lyrics to said song alongside it.
-
-### This is accomplished with the use of 2 api's (Youtube and musixmatch ) to query the input from the user input.
+### A web app that allows users to search for a based on an input, and then displays 5 suggestion's based on that input. This is accomplished with the use of 2 api's (Youtube and musixmatch ) to query the input.
 
 ---
 
