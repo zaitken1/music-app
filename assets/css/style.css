@@ -1,6 +1,7 @@
 /* global edits/resets */
 body {
   background-color: #1a1616;
+  font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -13,6 +14,12 @@ ul {
 }
 
 /* Jumbotron Styles */
+
+.jumbotron h1{
+
+  font-weight: 500;
+}
+
 .search-icon {
   position: relative;
   font-size: 1.3rem;
