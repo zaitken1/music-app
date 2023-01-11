@@ -4,6 +4,7 @@ var searchBtn = $(".search-btn");
 var searchInput = $(".search-input");
 var lyricsSection = $(".song-lyrics");
 var searchHist = $(".search-hist");
+var deleteButton = $(".bin-icon");
 
 // API Keys and base YouTube URL
 var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
@@ -14,6 +15,13 @@ var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${sophAPI
 
 //Check localStorage for items
 var searchHistory = JSON.parse(localStorage.getItem("track")) || [];
+
+// if local storage is not empty then delete icon will remain
+if(searchHistory.length !== 0){
+  deleteButton.removeClass('hide');
+  showModal();
+  // clearHistoryButtons();
+}
 
 //Add localStorage items to page on page load
 searchHist.html("");
@@ -55,7 +63,6 @@ function getVideoLink(event) {
           searchHistory.push(trackUpperCase);
           console.log("that doesn't exist");
         }
-
         searchInput.val("");
         songCard.html("");
         searchHist.html("");
@@ -157,12 +164,17 @@ function hist() {
 hist();
 
 // removes search-history buttons from local storage and the dom
-var deleteButton = $(".bin-icon");
-deleteButton.click(clearHistoryButtons);
+deleteButton.click(showModal);
+
+function showModal() {
+  $("#myModal").modal("show");
+}
+
+$(".btn-danger").click(clearHistoryButtons);
 
 function clearHistoryButtons (){
-  $(".history-btn-two").addClass('hide');
   localStorage.clear();
+  $(".history-btn-two").addClass('hide');
   deleteButton.addClass('hide');
 
 }
