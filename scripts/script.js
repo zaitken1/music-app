@@ -174,6 +174,7 @@ function clearHistoryButtons (){
   localStorage.clear();
   searchHistory = [];
   $(".history-btn-two").addClass('hide');
+  $(".history-btn").addClass('hide');
   deleteButton.addClass('hide');
 
 }
