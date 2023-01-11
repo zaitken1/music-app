@@ -135,6 +135,20 @@ h4 {
   color: #dc3545;
 }
 
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    background-color: #181c1ed9;
+    color: #e5e5e5;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
 /* Lyrics Display */
 .song-lyrics {
   background-color: rgba(119, 92, 133, 0.118);
