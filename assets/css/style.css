@@ -16,6 +16,10 @@ ul {
   color: rgb(153, 218, 49);
 }
 
+.lead {
+  font-weight: 400;
+}
+
 .hide {
   display: none;
 }
