@@ -6,7 +6,6 @@
 - [Technologies](#technologies-used)
 - [Live Application](#live-application)
 - [Features](#features)
-- [Credits](#Credits)
 
 ## Description
 
