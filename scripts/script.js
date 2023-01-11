@@ -172,8 +172,10 @@ $(".btn-danger").click(clearHistoryButtons);
 function clearHistoryButtons() {
   localStorage.clear();
   searchHistory = [];
-  $(".history-btn-two").addClass("hide");
-  deleteButton.addClass("hide");
+  $(".history-btn-two").addClass('hide');
+  $(".history-btn").addClass('hide');
+  deleteButton.addClass('hide');
+
 }
 
 //Starting function on search button click
