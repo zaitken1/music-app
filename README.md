@@ -1,5 +1,13 @@
 # MusiXTube
 
+## Contents
+
+- [Screenshots](#screenshots)
+- [Technologies](#technologies-used)
+- [Live Application](#live-application)
+- [Features](#features)
+- [Credits](#Credits)
+
 ## Description
 
 ---
@@ -10,7 +18,7 @@
 
 ## Screenshots
 
-<img width="1230" alt="Screenshot 2023-01-08 at 14 26 25" src="https://user-images.githubusercontent.com/87676748/211229833-61aa1ea7-b0d2-4246-b524-d0f57e8e91e7.png">![Screenshot 2023-01-11 145325](https://user-images.githubusercontent.com/87676748/211838368-5725f3ab-3e93-4f68-aced-0183e30a39d5.png)
+<img width="1230" alt="Screenshot 2023-01-08 at 14 26 25" src="https://user-images.githubusercontent.com/87676748/211229833-61aa1ea7-b0d2-4246-b524-d0f57e8e91e7.png"> ![Screenshot 2023-01-11 162356](https://user-images.githubusercontent.com/87676748/211863523-17b8ff11-25e2-40c5-920c-e5f3a6fd87f0.png)
 
 ---
 
@@ -20,7 +28,7 @@
 
 ---
 
-## Link to live deployment
+## live-application
 
 ## https://zaitken1.github.io/music-app/
 
