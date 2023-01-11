@@ -7,13 +7,24 @@ body {
 ul {
   list-style: none;
   color: #c9c9ff;
+  padding: 0;
 }
 
-/* Custom styles */
+/* Global Variables */
+
+:root {
+  --main-color: rgb(153, 218, 49);
+}
+
+/* CUSTOM STYLES */
 
 /* Heading Styles */
 .h1-letter {
-  color: rgb(153, 218, 49);
+  color: var(--main-color);
+}
+
+.lead {
+  font-weight: 400;
 }
 
 .hide {
@@ -50,7 +61,7 @@ ul {
 
 .search-input:focus {
   background-color: transparent;
-  border-color: #28a745;
+  border-color: var(--main-color);
 }
 
 input::placeholder {
@@ -59,7 +70,7 @@ input::placeholder {
 
 .search-btn {
   height: 40px;
-  border: 2px solid #28a745;
+  border: 2px solid var(--main-color);
 }
 
 /* Main area */
@@ -94,7 +105,7 @@ input::placeholder {
 /* History Section */
 .search-history {
   background-color: rgba(127, 204, 157, 0.093);
-  border: 1px solid #6cc39e;
+  border: 1px solid var(--main-color);
   border-radius: 7px;
 }
 h4 {
@@ -137,8 +148,8 @@ h4 {
 
 /* Lyrics Display */
 .song-lyrics {
-  background-color: rgba(119, 92, 133, 0.118);
-  border: 2px solid rgb(151, 139, 154);
+  background-color: rgba(127, 204, 157, 0.093);
+  border: 1px solid var(--main-color);
   border-radius: 7px;
 }
 .song-lyrics p {
