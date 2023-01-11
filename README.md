@@ -5,7 +5,6 @@
 - [Screenshots](#screenshots)
 - [Technologies](#technologies-used)
 - [Live Application](#live-application)
-- [Features](#features)
 
 ## Description
 
