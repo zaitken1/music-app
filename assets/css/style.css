@@ -9,11 +9,17 @@ ul {
   color: #c9c9ff;
 }
 
-/* Custom styles */
+/* Global Variables */
+
+:root {
+  --main-color: rgb(153, 218, 49);
+}
+
+/* CUSTOM STYLES */
 
 /* Heading Styles */
 .h1-letter {
-  color: rgb(153, 218, 49);
+  color: var(--main-color);
 }
 
 .lead {
