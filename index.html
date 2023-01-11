@@ -1,138 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>Music App</title>
-  </head>
 
-  <body>
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title">Delete Search History</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>
-              This action will remove search history. Would you like to proceed?
-            </p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
-              Delete
-            </button>
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-dismiss="modal"
-            >
-              Close
-            </button>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+    integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet" />
+  <title>MusiXTube</title>
+</head>
+
+<body>
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Delete Search History</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>
+            This action will remove search history. Would you like to proceed?
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Delete
+          </button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
         </div>
       </div>
     </div>
+  </div>
 
-    <header>
-      <div
-        class="jumbotron text-center"
-        style="background-image: url(./assets/images/cheers-204742_1920.jpg)"
-      >
-        <h1 class="display-4 text-light">Music App</h1>
-        <p class="lead text-muted">Enter a song to play and view the lyrics</p>
-        <hr class="my-4" />
-        <form class="form-inline my-2 my-lg-0 justify-content-center">
-          <i class="fas fa-search search-icon"></i>
-          <input
-            class="form-control mr-sm-2 search-input"
-            type="search"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-outline-success my-2 my-sm-0 search-btn">
-            Search
+  <header>
+    <div class="jumbotron text-center" style="background-image: url(./assets/images/cheers-204742_1920.jpg)">
+      <h1><span class="display-4 text-light"><span class="h1-letter">M</span>usiX<span class="h1-letter">T</span>ube
+      </h1>
+      <p class="lead text-muted"><span class="h1-letter">M</span>usic and info at your fingertips<span
+          class="h1-letter">!</span></p>
+      <hr class="my-4" />
+      <form class="form-inline my-2 my-lg-0 justify-content-center">
+        <i class="fas fa-search search-icon"></i>
+        <input class="form-control mr-sm-2 search-input" type="search" placeholder="Search" aria-label="Search" />
+        <button class="btn btn-outline-success my-2 my-sm-0 search-btn">
+          Search
+        </button>
+      </form>
+    </div>
+  </header>
+
+  <main class="container-fluid">
+    <div class="col-lg-12 d-flex justify-content-center align-items-center song-card card" style="width: 18rem"></div>
+    <div class="row m-3 justify-content-between">
+      <aside class="col-lg-3 search-history m-3 justify-content-center align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center mb-1">
+          <h4 class="my-3">Search History</h4>
+          <div class="d-flex flex-column align-items-center mb-4 button-container search-hist"></div>
+          <button type="button" class="delete-btn">
+            <i class="far fa-trash-alt bin-icon hide"></i>
           </button>
-        </form>
-      </div>
-    </header>
+        </div>
+      </aside>
 
-    <main class="container-fluid">
-      <div
-        class="col-lg-12 d-flex justify-content-center align-items-center song-card card"
-        style="width: 18rem"
-      ></div>
-      <div class="row m-3 justify-content-between">
-        <aside
-          class="col-lg-3 search-history m-3 justify-content-center align-items-center"
-        >
-          <div
-            class="d-flex flex-column justify-content-center align-items-center mb-1"
-          >
-            <h4 class="my-3">Search History</h4>
-            <div
-              class="d-flex flex-column align-items-center mb-4 button-container search-hist"
-            ></div>
-            <button type="button" class="delete-btn">
-              <i class="far fa-trash-alt bin-icon hide"></i>
-            </button>
-          </div>
-        </aside>
+      <section class="col-lg-8 song-lyrics m-3" style="text-align: center">
+        <div>
+          <h4 class="my-3">Similar to your search...</h4>
+          <p>
+            Suggestions based on your search.
+          </p>
+        </div>
+      </section>
+    </div>
+  </main>
 
-        <section class="col-lg-8 song-lyrics m-3" style="text-align: center">
-          <div>
-            <h4 class="my-3">Similar to your search...</h4>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci,
-              voluptatem autem.
-            </p>
-          </div>
-        </section>
-      </div>
-    </main>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+    crossorigin="anonymous"></script>
+  <script src="./scripts/script.js"></script>
+</body>
 
-    <script
-      src="https://code.jquery.com/jquery-3.6.3.min.js"
-      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./scripts/script.js"></script>
-  </body>
 </html>
