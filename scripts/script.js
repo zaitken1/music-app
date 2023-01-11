@@ -19,8 +19,6 @@ var searchHistory = JSON.parse(localStorage.getItem("track")) || [];
 // if local storage is not empty then delete icon will remain
 if(searchHistory.length !== 0){
   deleteButton.removeClass('hide');
-  showModal();
-  // clearHistoryButtons();
 }
 
 //Add localStorage items to page on page load
