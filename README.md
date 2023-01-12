@@ -1,4 +1,10 @@
-# Music Search App
+# MusiXTube
+
+## Contents
+
+- [Screenshots](#screenshots)
+- [Technologies](#technologies-used)
+- [Live Application](#live-application)
 
 ## Description
 
@@ -25,6 +31,14 @@ The user's search results are stored to localStorage and presented as persistent
 ## [![HTML](https://img.shields.io/badge/HTML-2ea44f)](https://) [![CSS](https://img.shields.io/badge/CSS-3234a8)](https://) [![Javascipt](https://img.shields.io/badge/Javascipt-a8a232)](https://)
 
 We also used Bootstrap to create a basic structure and two APIs to get data - YouTube Data API to present a dynamic link to the user and the Musixmatch API to present similar artists.
+
+---
+
+## live-application
+
+## https://zaitken1.github.io/music-app/
+
+---
 
 ## Link
 Live application: https://zaitken1.github.io/music-app/

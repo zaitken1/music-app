@@ -11,16 +11,14 @@ var musixMatchAPIKey = "ad3a142fa0bfd7ef82851240e57a5429";
 var youtubeAPIKey = "AIzaSyBhdeehy9kV7bhAksU03KmAr4G0eOQT6io";
 var scottAPIKey = "AIzaSyDpZQjFuUjVyg0d3_NEya9n2oYEvm9nMCw";
 var sophAPIKey = "AIzaSyD5r9mHgGwHO-m77puQByqYHX7gYO-LIsg";
-var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${sophAPIKey}&maxResults=1&order=relevance&`;
+var baseYouTubeURL = `https://www.googleapis.com/youtube/v3/search?key=${scottAPIKey}&maxResults=1&order=relevance&`;
 
 //Check localStorage for items
 var searchHistory = JSON.parse(localStorage.getItem("track")) || [];
 
 // if local storage is not empty then delete icon will remain
-if(searchHistory.length !== 0){
-  deleteButton.removeClass('hide');
-  showModal();
-  // clearHistoryButtons();
+if (searchHistory.length !== 0) {
+  deleteButton.removeClass("hide");
 }
 
 //Add localStorage items to page on page load
@@ -91,8 +89,7 @@ function getVideoLink(event) {
         songCard.html(`
               <a href="https://www.youtube.com/watch?v=${videoID}" target="_blank"><button type="button" class="btn btn-primary btn-lg yt-btn"><i class="fab fa-youtube"></i>Watch song on YouTube</button></a>
               `);
-              deleteButton.removeClass('hide');
-
+        deleteButton.removeClass("hide");
       });
     }
   }
@@ -172,9 +169,11 @@ function showModal() {
 
 $(".btn-danger").click(clearHistoryButtons);
 
-function clearHistoryButtons (){
+function clearHistoryButtons() {
   localStorage.clear();
+  searchHistory = [];
   $(".history-btn-two").addClass('hide');
+  $(".history-btn").addClass('hide');
   deleteButton.addClass('hide');
 
 }

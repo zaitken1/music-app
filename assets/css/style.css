@@ -1,18 +1,42 @@
 /* global edits/resets */
 body {
   background-color: #1a1616;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
   list-style: none;
   color: #c9c9ff;
+  padding: 0;
+}
+
+/* Global Variables */
+
+:root {
+  --main-color: rgb(153, 218, 49);
+}
+
+/* CUSTOM STYLES */
+
+/* Heading Styles */
+.h1-letter {
+  color: var(--main-color);
+}
+
+.lead {
+  font-weight: 400;
 }
 
 .hide {
-    display:none;
+  display: none;
 }
 
 /* Jumbotron Styles */
+
+.jumbotron h1 {
+  font-weight: 500;
+}
+
 .search-icon {
   position: relative;
   font-size: 1.3rem;
@@ -37,7 +61,7 @@ ul {
 
 .search-input:focus {
   background-color: transparent;
-  border-color: #28a745;
+  border-color: var(--main-color);
 }
 
 input::placeholder {
@@ -46,7 +70,7 @@ input::placeholder {
 
 .search-btn {
   height: 40px;
-  border: 2px solid #28a745;
+  border: 2px solid var(--main-color);
 }
 
 /* Main area */
@@ -68,11 +92,11 @@ input::placeholder {
   background-color: #2cb74c;
 }
 
-.yt-btn:active, .yt-btn:focus{
+.yt-btn:active,
+.yt-btn:focus {
   background-color: #28a745 !important;
   box-shadow: none !important;
 }
-
 
 .fa-youtube {
   padding-right: 10px;
@@ -81,21 +105,22 @@ input::placeholder {
 /* History Section */
 .search-history {
   background-color: rgba(127, 204, 157, 0.093);
-  border: 1px solid #6cc39e;
+  border: 1px solid var(--main-color);
   border-radius: 7px;
 }
 h4 {
   color: #e5e5e5;
 }
 
-.history-btn, .history-btn-two {
-    margin-top: 9px;
-    background-color: #3faf30; 
-    padding: 2px;
-    color: white;
-    border: .7px solid rgb(38, 74, 55);
-    border-radius: 3px;
-    width: 7rem;
+.history-btn,
+.history-btn-two {
+  margin-top: 9px;
+  background-color: #3faf30;
+  padding: 2px;
+  color: white;
+  border: 0.7px solid rgb(38, 74, 55);
+  border-radius: 3px;
+  width: 7rem;
 }
 
 .history-btn:hover {
@@ -103,28 +128,42 @@ h4 {
 }
 
 .delete-btn {
-   padding: 2px;
-   background-color: transparent;
-   border: none;
+  padding: 2px;
+  background-color: transparent;
+  border: none;
 }
 
 .fa-trash-alt:hover {
-    background: #dc3546d6;
-    border-radius: 10px;
-    padding: 10px;
-    color: #e5e5e5;
+  background: #dc3546d6;
+  border-radius: 10px;
+  padding: 10px;
+  color: #e5e5e5;
 }
 
 .fa-trash-alt {
-   font-size: 1.4rem;
-    padding: 10px;
-    color: #dc3545;
+  font-size: 1.4rem;
+  padding: 10px;
+  color: #dc3545;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header, .modal-body, .modal-footer {
+    background-color: #181c1ed9;
+    color: #e5e5e5;
+}
+
+.modal-header {
+    border-bottom: none;
 }
 
 /* Lyrics Display */
 .song-lyrics {
-  background-color: rgba(119, 92, 133, 0.118);
-  border: 2px solid rgb(151, 139, 154);
+  background-color: rgba(127, 204, 157, 0.093);
+  border: 1px solid var(--main-color);
   border-radius: 7px;
 }
 .song-lyrics p {
@@ -143,10 +182,10 @@ h4 {
     flex-direction: row !important;
   }
 
-  .history-btn, .history-btn-two {
+  .history-btn,
+  .history-btn-two {
     margin: 5px;
   }
-
 }
 
 @media screen and (max-width: 758px) {
